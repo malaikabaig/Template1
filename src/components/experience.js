@@ -4,7 +4,10 @@ import Card from '@mui/material/Card';
 export default function Experience() {
   const goodfood = (
     <>
-      <CardContent sx={{ textAlign: 'center', maxWidth: 330 }}>
+      <CardContent
+        sx={{ textAlign: 'center', maxWidth: 330, backgroundColor: '#fafafa' }}
+      >
+        <img src="" alt="img" />
         <Typography
           variant="h5"
           fontSize={30}
@@ -23,7 +26,9 @@ export default function Experience() {
 
   const travel = (
     <>
-      <CardContent sx={{ textAlign: 'center', maxWidth: 330 }}>
+      <CardContent
+        sx={{ textAlign: 'center', maxWidth: 330, backgroundColor: '#fafafa' }}
+      >
         <Typography
           variant="h5"
           fontSize={30}
@@ -40,9 +45,11 @@ export default function Experience() {
     </>
   );
 
-  const Airplane = (
+  const airplane = (
     <>
-      <CardContent sx={{ textAlign: 'center', maxWidth: 330 }}>
+      <CardContent
+        sx={{ textAlign: 'center', maxWidth: 330, backgroundColor: '#fafafa' }}
+      >
         <Typography
           variant="h5"
           fontSize={30}
@@ -58,24 +65,113 @@ export default function Experience() {
       </CardContent>
     </>
   );
+
+  const beach = (
+    <>
+      <CardContent
+        sx={{ textAlign: 'center', maxWidth: 330, backgroundColor: '#fafafa' }}
+      >
+        <Typography
+          variant="h5"
+          fontSize={30}
+          fontWeight={'bold'}
+          fontFamily={'Abril Fatface, serif, times'}
+        >
+          Beach Resort
+          <Typography variant="body1" color="text.secondary" lineHeight={2}>
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts.
+          </Typography>
+        </Typography>
+      </CardContent>
+    </>
+  );
+
+  const mountain = (
+    <>
+      <CardContent
+        sx={{ textAlign: 'center', maxWidth: 330, backgroundColor: '#fafafa' }}
+      >
+        <Typography
+          variant="h5"
+          fontSize={30}
+          fontWeight={'bold'}
+          fontFamily={'Abril Fatface, serif, times'}
+        >
+          Mountain Climbing
+          <Typography variant="body1" color="text.secondary" lineHeight={2}>
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts.
+          </Typography>
+        </Typography>
+      </CardContent>
+    </>
+  );
+
+  const hotair = (
+    <>
+      <CardContent
+        sx={{ textAlign: 'center', maxWidth: 330, backgroundColor: '#fafafa' }}
+      >
+        <Typography
+          variant="h5"
+          fontSize={30}
+          fontWeight={'bold'}
+          fontFamily={'Abril Fatface, serif, times'}
+        >
+          Hot Air Balloon
+          <Typography variant="body1" color="text.secondary" lineHeight={2}>
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts.
+          </Typography>
+        </Typography>
+      </CardContent>
+    </>
+  );
   return (
     <>
-      <Box sx={{ mx: 55 }}>
-        <Box>
-          Experience Once In Your Life Time
-          <Typography>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean.
-          </Typography>
+      <Box backgroundColor={'#fafafa'} sx={{ py: 15 }}>
+        <Box sx={{ mx: 55 }}>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              textAlign: 'center',
+              mx: 25,
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: 34,
+                fontWeight: 'bold',
+                fontFamily: 'Abril Fatface, serif, times',
+              }}
+            >
+              Experience Once In Your Life Time
+            </Typography>
+            <Typography
+              sx={{
+                lineHeight: 2,
+                fontSize: 17,
+                mb: 5,
+                color: 'text.secondary',
+              }}
+            >
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean.
+            </Typography>
+          </Box>
+          <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+            <Card variant="elevated">{goodfood}</Card>
+            <Card variant="elevated">{travel}</Card>
+            <Card variant="elevated">{airplane}</Card>
+            <Card variant="elevated">{beach}</Card>
+            <Card variant="elevated">{mountain}</Card>
+            <Card variant="elevated">{hotair}</Card>
+          </Box>
         </Box>
-        <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-          <Card variant="outlined">{goodfood}</Card>
-          <Card variant="outlined">{travel}</Card>
-          <Card variant="outlined">{travel}</Card>
-        </Box>
-        <Box></Box>
       </Box>
     </>
   );
