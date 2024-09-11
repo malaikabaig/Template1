@@ -6,6 +6,7 @@ import Menu from './components/menu';
 import Experience from './components/experience';
 import Slider from './components/slider';
 import Blog from './components/blog';
+import Reviews from './components/customer';
 
 function MyApp(props) {
   return (
@@ -16,6 +17,7 @@ function MyApp(props) {
       <Experience />
       <Slider />
       <Blog />
+      <Reviews />
     </>
   );
 }
