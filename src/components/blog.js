@@ -26,6 +26,52 @@ export default function Blog() {
     </>
   );
 
+  const card2 = (
+    <>
+      <CardMedia sx={{ height: 234 }} image={img2} title="img2" />
+      <CardContent sx={{ maxWidth: 330, my: 3 }}>
+        <Box sx={{ textAlign: 'left', px: 4 }}>
+          <Typography sx={{ color: '#ced4da' }}>FEBURARY 26,2018</Typography>
+          <Typography
+            variant="h5"
+            fontSize={30}
+            fontWeight={'bold'}
+            fontFamily={'Abril Fatface, serif, times'}
+          >
+            45 Best Places to Unwind
+            <Typography variant="body1" color="#6c757d" lineHeight={2}>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts.
+            </Typography>
+          </Typography>
+        </Box>
+      </CardContent>
+    </>
+  );
+
+  const card3 = (
+    <>
+      <CardMedia sx={{ height: 234 }} image={img3} title="img3" />
+      <CardContent sx={{ maxWidth: 330, my: 3 }}>
+        <Box sx={{ textAlign: 'left', px: 4 }}>
+          <Typography sx={{ color: '#ced4da' }}>FEBURARY 26,2018</Typography>
+          <Typography
+            variant="h5"
+            fontSize={30}
+            fontWeight={'bold'}
+            fontFamily={'Abril Fatface, serif, times'}
+          >
+            45 Best Places to Unwind
+            <Typography variant="body1" color="#6c757d" lineHeight={2}>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts.
+            </Typography>
+          </Typography>
+        </Box>
+      </CardContent>
+    </>
+  );
+
   return (
     <Box sx={{ backgroundColor: '#65c0ba !important' }}>
       <Box
@@ -72,10 +118,10 @@ export default function Blog() {
             {card1}
           </Card>
           <Card sx={{ mr: 3.5 }} variant="elevated">
-            {card1}
+            {card2}
           </Card>
           <Card sx={{ mr: 3.5 }} variant="elevated">
-            {card1}
+            {card3}
           </Card>
         </Box>
       </Box>
