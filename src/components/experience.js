@@ -7,15 +7,20 @@ export default function Experience() {
       <CardContent
         sx={{ textAlign: 'center', maxWidth: 330, backgroundColor: '#fafafa' }}
       >
-        <img src="" alt="img" />
+        <img
+          width={74}
+          src="https://preview.colorlib.com/theme/hepta/fonts/flaticon/svg/001-breakfast.svg"
+          alt="img"
+        />
         <Typography
           variant="h5"
           fontSize={30}
           fontWeight={'bold'}
           fontFamily={'Abril Fatface, serif, times'}
+          sx={{ mt: 3 }}
         >
           Good Foods
-          <Typography variant="body1" color="text.secondary" lineHeight={2}>
+          <Typography variant="body1" color="#6c757d" lineHeight={2}>
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia, there live the blind texts.
           </Typography>
@@ -29,11 +34,17 @@ export default function Experience() {
       <CardContent
         sx={{ textAlign: 'center', maxWidth: 330, backgroundColor: '#fafafa' }}
       >
+        <img
+          width={74}
+          src="https://preview.colorlib.com/theme/hepta/fonts/flaticon/svg/002-planet-earth.svg"
+          alt="img"
+        />
         <Typography
           variant="h5"
           fontSize={30}
           fontWeight={'bold'}
           fontFamily={'Abril Fatface, serif, times'}
+          sx={{ mt: 3 }}
         >
           Travel Anywhere
           <Typography variant="body1" color="text.secondary" lineHeight={2}>
@@ -50,11 +61,17 @@ export default function Experience() {
       <CardContent
         sx={{ textAlign: 'center', maxWidth: 330, backgroundColor: '#fafafa' }}
       >
+        <img
+          width={74}
+          src="https://preview.colorlib.com/theme/hepta/fonts/flaticon/svg/003-airplane.svg"
+          alt="img"
+        />
         <Typography
           variant="h5"
           fontSize={30}
           fontWeight={'bold'}
           fontFamily={'Abril Fatface, serif, times'}
+          sx={{ mt: 3 }}
         >
           Airplane
           <Typography variant="body1" color="text.secondary" lineHeight={2}>
@@ -71,11 +88,17 @@ export default function Experience() {
       <CardContent
         sx={{ textAlign: 'center', maxWidth: 330, backgroundColor: '#fafafa' }}
       >
+        <img
+          width={74}
+          src="https://preview.colorlib.com/theme/hepta/fonts/flaticon/svg/004-beach.svg"
+          alt="img"
+        />
         <Typography
           variant="h5"
           fontSize={30}
           fontWeight={'bold'}
           fontFamily={'Abril Fatface, serif, times'}
+          sx={{ mt: 3 }}
         >
           Beach Resort
           <Typography variant="body1" color="text.secondary" lineHeight={2}>
@@ -92,11 +115,17 @@ export default function Experience() {
       <CardContent
         sx={{ textAlign: 'center', maxWidth: 330, backgroundColor: '#fafafa' }}
       >
+        <img
+          width={74}
+          src="https://preview.colorlib.com/theme/hepta/fonts/flaticon/svg/005-mountains.svg"
+          alt="img"
+        />
         <Typography
           variant="h5"
           fontSize={30}
           fontWeight={'bold'}
           fontFamily={'Abril Fatface, serif, times'}
+          sx={{ mt: 3 }}
         >
           Mountain Climbing
           <Typography variant="body1" color="text.secondary" lineHeight={2}>
@@ -113,11 +142,17 @@ export default function Experience() {
       <CardContent
         sx={{ textAlign: 'center', maxWidth: 330, backgroundColor: '#fafafa' }}
       >
+        <img
+          width={74}
+          src="https://preview.colorlib.com/theme/hepta/fonts/flaticon/svg/006-hot-air-balloon.svg"
+          alt="img"
+        />
         <Typography
           variant="h5"
           fontSize={30}
           fontWeight={'bold'}
           fontFamily={'Abril Fatface, serif, times'}
+          sx={{ mt: 3 }}
         >
           Hot Air Balloon
           <Typography variant="body1" color="text.secondary" lineHeight={2}>

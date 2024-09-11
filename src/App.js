@@ -4,6 +4,8 @@ import Nav from './components/navbar';
 import Welcome from './components/welcome';
 import Menu from './components/menu';
 import Experience from './components/experience';
+import Slider from './components/slider';
+import Blog from './components/blog';
 
 function MyApp(props) {
   return (
@@ -12,6 +14,8 @@ function MyApp(props) {
       <Menu />
       <Welcome />
       <Experience />
+      <Slider />
+      <Blog />
     </>
   );
 }
