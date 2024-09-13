@@ -5,61 +5,92 @@ import ava3 from '../ava3.jpg';
 export default function Reviews() {
   const card1 = (
     <>
-      <CardMedia
-        sx={{ height: 75, width: 75, borderRadius: 100, mt: 5 }}
-        image={ava1}
-        title="img1"
-      />
-      <CardContent sx={{ maxWidth: 330, my: 3 }}>
-        <Box sx={{ textAlign: 'left', px: 4 }}>
-          <Typography variant="body1" color="#6c757d" lineHeight={2}>
-            “Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean.”
-          </Typography>
-        </Box>
-      </CardContent>
+      <Box sx={{ backgroundColor: '#fafafa' }}>
+        <CardMedia
+          sx={{
+            height: 75,
+            width: 75,
+            borderRadius: 100,
+            // mt: 5,
+            ml: 6,
+          }}
+          image={ava1}
+          title="img1"
+        />
+        <CardContent sx={{ maxWidth: 330, my: 3 }}>
+          <Box sx={{ textAlign: 'left', px: 4 }}>
+            <Typography variant="body1" color="#6c757d" lineHeight={2}>
+              “Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean.”
+            </Typography>
+            <Typography sx={{ fontSize: 16, mt: 3, color: 'text.secondary' }}>
+              — Clare Gupta
+            </Typography>
+          </Box>
+        </CardContent>
+      </Box>
     </>
   );
 
   const card2 = (
     <>
-      <CardMedia
-        sx={{ height: 75, width: 75, borderRadius: 100, mt: 5 }}
-        image={ava2}
-        title="img2"
-      />
-      <CardContent sx={{ maxWidth: 330, my: 3 }}>
-        <Box sx={{ textAlign: 'left', px: 4 }}>
-          <Typography variant="body1" color="#6c757d" lineHeight={2}>
-            “Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean.”
-          </Typography>
-        </Box>
-      </CardContent>
+      <Box sx={{ backgroundColor: '#fafafa' }}>
+        <CardMedia
+          sx={{
+            height: 75,
+            width: 75,
+            borderRadius: 100,
+            ml: 6,
+          }}
+          image={ava2}
+          title="img2"
+        />
+        <CardContent sx={{ maxWidth: 330, my: 3 }}>
+          <Box sx={{ textAlign: 'left', px: 4 }}>
+            <Typography variant="body1" color="#6c757d" lineHeight={2}>
+              “Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean.”
+            </Typography>
+            <Typography sx={{ fontSize: 16, mt: 3, color: 'text.secondary' }}>
+              — Rogie Slater
+            </Typography>
+          </Box>
+        </CardContent>
+      </Box>
     </>
   );
 
   const card3 = (
     <>
-      <CardMedia
-        sx={{ height: 75, width: 75, borderRadius: 100, mt: 5 }}
-        image={ava3}
-        title="img3"
-      />
-      <CardContent sx={{ maxWidth: 330, my: 3 }}>
-        <Box sx={{ textAlign: 'left', px: 4 }}>
-          <Typography variant="body1" color="#6c757d" lineHeight={2}>
-            “Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean.”
-          </Typography>
-        </Box>
-      </CardContent>
+      <Box sx={{ backgroundColor: '#fafafa' }}>
+        <CardMedia
+          sx={{
+            height: 75,
+            width: 75,
+            borderRadius: 100,
+            ml: 6,
+          }}
+          image={ava3}
+          title="img3"
+        />
+        <CardContent sx={{ maxWidth: 330, my: 3 }}>
+          <Box sx={{ textAlign: 'left', px: 4 }}>
+            <Typography variant="body1" color="#6c757d" lineHeight={2}>
+              “Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean.”
+            </Typography>
+            <Typography sx={{ fontSize: 16, mt: 3, color: 'text.secondary' }}>
+              — John Doe
+            </Typography>
+          </Box>
+        </CardContent>
+      </Box>
     </>
   );
 
@@ -71,8 +102,19 @@ export default function Reviews() {
           py: 15,
           textAlign: 'center',
           color: 'white',
+          flexDirection: 'column',
+          display: 'flex',
         }}
       >
+        <Typography
+          sx={{ color: 'black' }}
+          variant="h5"
+          fontSize={75}
+          fontWeight={'bold'}
+          fontFamily={'Abril Fatface, serif, times'}
+        >
+          Happy Customers
+        </Typography>
         <Box
           sx={{
             display: 'flex',
