@@ -11,15 +11,15 @@ export default function Reviews() {
             height: 75,
             width: 75,
             borderRadius: 100,
-            // mt: 5,
+
             ml: 6,
           }}
           image={ava1}
           title="img1"
         />
         <CardContent sx={{ maxWidth: 330, my: 3 }}>
-          <Box sx={{ textAlign: 'left', px: 4 }}>
-            <Typography variant="body1" color="#6c757d" lineHeight={2}>
+          <Box sx={{ textAlign: 'left', px: 1 }}>
+            <Typography variant="body1" lineHeight={2}>
               “Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts. Separated
               they live in Bookmarksgrove right at the coast of the Semantics, a
@@ -48,8 +48,8 @@ export default function Reviews() {
           title="img2"
         />
         <CardContent sx={{ maxWidth: 330, my: 3 }}>
-          <Box sx={{ textAlign: 'left', px: 4 }}>
-            <Typography variant="body1" color="#6c757d" lineHeight={2}>
+          <Box sx={{ textAlign: 'left', px: 1 }}>
+            <Typography variant="body1" lineHeight={2}>
               “Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts. Separated
               they live in Bookmarksgrove right at the coast of the Semantics, a
@@ -78,8 +78,8 @@ export default function Reviews() {
           title="img3"
         />
         <CardContent sx={{ maxWidth: 330, my: 3 }}>
-          <Box sx={{ textAlign: 'left', px: 4 }}>
-            <Typography variant="body1" color="#6c757d" lineHeight={2}>
+          <Box sx={{ textAlign: 'left', px: 1 }}>
+            <Typography variant="body1" lineHeight={2}>
               “Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts. Separated
               they live in Bookmarksgrove right at the coast of the Semantics, a
@@ -98,7 +98,7 @@ export default function Reviews() {
     <Box sx={{ backgroundColor: '#fafafa !important' }}>
       <Box
         sx={{
-          mx: 55,
+          mx: 45,
           py: 15,
           textAlign: 'center',
           color: 'white',
@@ -122,15 +122,17 @@ export default function Reviews() {
             // flexWrap: 'wrap',
             mt: 9,
             justifyContent: 'center',
+            alignItems: 'flex-start',
           }}
         >
-          <Card sx={{ mr: 3.5 }} variant="elevated">
+          {/* , backgroundColor: '#fafafa' */}
+          <Card sx={{ mr: 3.5, backgroundColor: '#fafafa' }} variant="elevated">
             {card1}
           </Card>
-          <Card sx={{ mr: 3.5 }} variant="elevated">
+          <Card sx={{ mr: 3.5, backgroundColor: '#fafafa' }} variant="elevated">
             {card2}
           </Card>
-          <Card sx={{ mr: 3.5 }} variant="elevated">
+          <Card sx={{ mr: 3.5, backgroundColor: '#fafafa' }} variant="elevated">
             {card3}
           </Card>
         </Box>

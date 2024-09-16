@@ -7,7 +7,8 @@ import Experience from './components/experience';
 import Slider from './components/slider';
 import Blog from './components/blog';
 import Reviews from './components/customer';
-
+import TopDest from './components/topdest';
+import Footer from './components/footer';
 function MyApp(props) {
   return (
     <>
@@ -18,6 +19,8 @@ function MyApp(props) {
       <Slider />
       <Blog />
       <Reviews />
+      <TopDest />
+      <Footer />
     </>
   );
 }
