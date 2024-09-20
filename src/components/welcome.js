@@ -17,11 +17,11 @@ export default function Welcome() {
     <Box
       sx={{
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: { xs: 'column', md: 'row' }, // Column for small screens, row for medium and up
         my: 15,
         alignItems: 'center',
         justifyContent: 'center',
-        mx: 55,
+        mx: { xs: 2, md: 55 }, // Adjust horizontal margins for different screen sizes
       }}
     >
       <Box>
@@ -31,9 +31,10 @@ export default function Welcome() {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          mx: 5,
+          mx: { xs: 0, md: 5 }, // Adjust margin for different screen sizes
           lineHeight: 2,
-          mt: 10,
+          mt: { xs: 5, md: 10 }, // Adjust top margin for different screen sizes
+          textAlign: { xs: 'center', md: 'left' }, // Center text on small screens
         }}
       >
         <Box
@@ -55,7 +56,7 @@ export default function Welcome() {
           Far far away, behind the word mountains, far from the countries
           Vokalia and Consonantia, there live the blind texts. Separated they
           live in Bookmarksgrove right at the coast of the Semantics, a large
-          language ocean.{' '}
+          language ocean.
           <Box sx={{ mt: 2 }}>
             A small river named Duden flows by their place and supplies it with
             the necessary regelialia.
@@ -70,7 +71,7 @@ export default function Welcome() {
               mt: 5,
               width: 280,
               color: 'teal',
-              mx: -2,
+              mx: 'auto', // Center button on small screens
               backgroundColor: isHovered ? 'white' : 'white',
             }}
             variant="text"

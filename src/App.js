@@ -4,7 +4,7 @@ import Nav from './components/navbar';
 import Welcome from './components/welcome';
 import Menu from './components/menu';
 import Experience from './components/experience';
-import Slider from './components/slider';
+import Tour from './components/tour';
 import Blog from './components/blog';
 import Reviews from './components/customer';
 import TopDest from './components/topdest';
@@ -16,7 +16,7 @@ function MyApp(props) {
       <Menu />
       <Welcome />
       <Experience />
-      <Slider />
+      <Tour />
       <Blog />
       <Reviews />
       <TopDest />
