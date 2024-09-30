@@ -1,0 +1,180 @@
+import { Box, Button, Divider, TextField, Typography } from '@mui/material';
+import { useState, useEffect } from 'react';
+
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import axios from 'axios';
+export default function Todo() {
+  const [todos, setTodos] = useState([]); // State to store the list of todos
+  const [currentTodo, setCurrentTodo] = useState(''); // State for the current input
+  const [editIndex, setEditIndex] = useState(null); // State for the todo being edited
+  const [editID, setEditID] = useState('');
+
+  useEffect(() => {
+    const init = async () => {
+      let { data } = await axios.get('http://localhost:7080/api/all');
+
+      if (data) {
+        setTodos(data);
+      }
+    };
+
+    init();
+  }, []);
+
+  // Handler to add  todo
+  const add = async () => {
+    try {
+      console.log(currentTodo);
+      const todo = await axios.post('http://localhost:7080/api/add', {
+        type: currentTodo,
+      });
+      console.log(todo.data.data);
+      console.log(todo.data.data);
+      if (todo.data.data) {
+        setTodos([...todos, todo.data.data]);
+      }
+    } catch (error) {
+      alert('Something went wrong');
+    }
+  };
+
+  //handler to update todo
+  const update = async () => {
+    try {
+      if (editID) {
+        const todo = await axios.put(`http://localhost:7080/api/${editID}`, {
+          type: currentTodo, // Use the currentTodo to replace the value
+        });
+        console.log(todo);
+
+        if (todo.data) {
+          // Map through todos and update the edited todo
+          const updatedTodos = todos.map((todo) =>
+            todo._id === editID ? { ...todo, type: currentTodo } : todo
+          );
+
+          setTodos(updatedTodos);
+          setEditIndex(null);
+          setEditID('');
+          setCurrentTodo('');
+        }
+      }
+    } catch (error) {
+      alert('Something went wrong while updating the todo');
+    }
+  };
+
+  // Handler for setting todo for editing
+  const handleEditTodo = (index) => {
+    setEditIndex(index); // Set the index of the todo being edited
+    setEditID(todos[index]._id); // Set the ID for API calls
+    setCurrentTodo(todos[index].type); // Pre-fill the input field with the current value of the todo
+  };
+
+  // Handler to delete a todo
+  const handleDeleteTodo = async (id) => {
+    let data = await axios.delete(`http://localhost:7080/api/${id}`);
+
+    if (data.data) {
+      const updatedTodos = todos.filter((todo) => todo._id !== id);
+      setTodos(updatedTodos);
+    }
+  };
+
+  return (
+    <Box sx={{ backgroundColor: 'teal', height: '100vh' }}>
+      <Box sx={{ mx: { xs: 20, sm: 25, md: 30, lg: 50 }, py: 10 }}>
+        <Typography
+          sx={{
+            color: 'white',
+            fontWeight: 'bold',
+            fontSize: { xs: 30, sm: 35, md: 40, lg: 50 },
+          }}
+        >
+          Todo List
+        </Typography>
+        <Typography
+          sx={{
+            color: 'white',
+            fontWeight: 'bold',
+            fontSize: { xs: 25, sm: 30, md: 35, lg: 38 },
+          }}
+        >
+          A simple react todo list app
+        </Typography>
+        <Divider sx={{ width: '100%', backgroundColor: 'white', height: 10 }} />
+
+        {/* Display the list of todos */}
+        <Box sx={{ mt: 4, color: 'white' }}>
+          {todos.length > 0 && (
+            <Typography variant="h6">Your Todos:</Typography>
+          )}
+          {todos.map((todo, index) => (
+            <Box
+              key={index}
+              sx={{ display: 'flex', alignItems: 'center', pt: 1 }}
+            >
+              <Typography sx={{ flexGrow: 1 }}>
+                {index + 1}.{todo.type}
+              </Typography>
+              <EditIcon
+                onClick={() => handleEditTodo(index)}
+                sx={{ cursor: 'pointer', color: 'white', ml: 1 }}
+              />
+              <DeleteIcon
+                onClick={() => handleDeleteTodo(todo._id)}
+                sx={{ cursor: 'pointer', color: 'white', ml: 1 }}
+              />
+            </Box>
+          ))}
+        </Box>
+
+        <Typography sx={{ fontSize: 35, color: 'white', pt: 10 }}>
+          Add New Todo
+        </Typography>
+        <TextField
+          id="outlined-multiline-flexible"
+          variant="standard"
+          placeholder="New Todo"
+          value={currentTodo}
+          onChange={(e) => setCurrentTodo(e.target.value)}
+          sx={{
+            width: '300px',
+            '& .MuiInputBase-input': { height: '40px', color: 'white' },
+            borderBottom: '1px solid #727272',
+            '& .MuiInputBase-root': {
+              borderBottom: '1px solid #727272',
+            },
+            '& .MuiInputBase-root:before': {
+              borderBottom: '1px solid #727272',
+            },
+            '& .MuiInputBase-root:after': {
+              borderBottom: '2px solid white',
+            },
+            '& .MuiInputLabel-root': {
+              color: '#727272',
+            },
+            '& .MuiInputLabel-root.Mui-focused': {
+              color: 'white',
+            },
+          }}
+        />
+        <Button
+          variant="standard"
+          onClick={editIndex !== null ? update : add}
+          sx={{
+            color: 'white',
+            outlineColor: 'white',
+            border: 1,
+            ml: 2,
+            fontSize: 25,
+          }}
+        >
+          {/* Add Todo */}
+          {editIndex !== null ? 'Update Todo' : 'Add Todo'}
+        </Button>
+      </Box>
+    </Box>
+  );
+}
